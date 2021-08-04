@@ -1,0 +1,142 @@
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Jura', sans-serif;
+}
+.site-size {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+h1, h1 span {
+    font-size: 5rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h2, h2 span {
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h3, h3 span {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h4, h4 span {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h5, h5 span {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h6, h6 span {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+}
+p, p span {
+    font-size: 1.14285714286rem;
+    font-weight: 400;
+    font-style: normal;
+}
+main.webacoders {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.webacoders__video-full-bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    -webkit-transform: scale(1.5);
+    /*-moz-transform: scaleX(1.72);*/
+}
+.webacoders__layout-bg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout-bg-container__center-form-block {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #000000ab;
+}
+.center-form-block__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.loginForm input {
+    padding: 5px 0 5px 5px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-bottom: 10px;
+    color: white;
+}
+.loginForm input::placeholder {
+    color: #fff;
+}
+.loginForm__label {
+    margin: 5px 0;
+    display: flex;
+}
+.loginForm__label span {
+    color: #fff;
+}
+.checkbox-container {
+    width: 17px;
+    height: 17px;
+    padding: 3px;
+    border: 1px solid white;
+}
+.checkbox-container span {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+.checkbox-container__checkbox:checked + .checkbox-container span {display: block;}
+.loginForm__btns-row {
+    justify-content: space-between;
+    display: flex;
+}
+.loginForm__btns-row button {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.btns-row__submit-btn span{
+    color: green;
+    font-weight: inherit;
+    font-size: inherit;
+}
+.btns-row__reset-btn span{
+    color: red;
+    font-weight: inherit;
+    font-size: inherit;
+}

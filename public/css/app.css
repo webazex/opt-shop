@@ -1,0 +1,50 @@
+*{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.site-size {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+h1, h1 span {
+    font-size: 5rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h2, h2 span {
+    font-size: 4rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h3, h3 span {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h4, h4 span {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h5, h5 span {
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: normal;
+}
+h6, h6 span {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+}
+p, p span {
+    font-size: 1.14285714286rem;
+    font-weight: 400;
+    font-style: normal;
+}
