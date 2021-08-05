@@ -12,40 +12,41 @@ class UseRoleIsValid
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
+
     public function handle(Request $request, Closure $next)
     {
         $userRole = Auth::user()->role_id;
         $reqUri = $request->path();
-        switch ($userRole){
+        switch ($userRole) {
             case 1:
-               if($reqUri === 'admin'){
-                   return $next($request);
-               }else{
-                   return response()->redirectTo('/admin');
-               }
+                if (preg_match_all('~(^admin\/((\w*\/\w*)|(.*))|admin)+~', $reqUri)) {
+                    return $next($request);
+                } else {
+                    return response()->redirectTo('/admin');
+                }
                 break;
             case 2:
-                if($reqUri === 'manager'){
+                if (preg_match_all('~(^manager\/((\w*\/\w*)|(.*))|manager)+~', $reqUri)) {
                     return $next($request);
-                }else{
+                } else {
                     return redirect()->intended('/manager');
                 }
                 break;
             case 3:
-                if($reqUri === 'dashboard'){
+                if (preg_match_all('~(^dashboard\/((\w*\/\w*)|(.*))|dashboard)+~', $reqUri)) {
                     return $next($request);
-                }else{
+                } else {
                     return redirect()->intended('/dashboard');
                 }
                 break;
             case 4:
-                if($reqUri === 'shop'){
+                if (preg_match_all('~(^shop\/((\w*\/\w*)|(.*))|shop)+~', $reqUri)) {
                     return $next($request);
-                }else{
+                } else {
                     return redirect()->intended('/shop');
                 }
             default:

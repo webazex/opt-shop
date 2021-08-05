@@ -14,6 +14,30 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
+    public function index(){
+        if(Auth::check()){
+            $roleId = Auth::user()->role_id;
+            switch ($roleId){
+                case 1:
+                    return response()->redirectTo('/admin');
+                    break;
+                case 2:
+                    return redirect()->intended('/manager');
+                    break;
+                case 3:
+                    return redirect()->intended('/dashboard');
+                    break;
+                case 4:
+                    return redirect()->intended('/shop');
+                    break;
+                default:
+                    return view('home');
+            }
+        }else{
+            return view('home');
+        }
+    }
+
     public function auth(Request $request){
         $credentials = $request->only('login', 'password');
         $rememberValue = $request->only('rememberMe');

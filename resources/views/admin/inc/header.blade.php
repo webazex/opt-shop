@@ -8,10 +8,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
-    <title>Document</title>
+    <title>Административная панель</title>
 </head>
 <body>
 <header>
-    admin header
+    <div class="site-size">
+        <div class="site-size__header">
+            <button type="button" class="header__menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="/admin/profile" class="header__user-info">
+                <span class="user-info__job">Администратор: </span>
+                <span class="user-info__fname">Одмэне</span>
+                <span class="user-info__lname">Админ</span>
+                <span class="user-info__sname">Админский</span>
+            </a>
+            <div class="header__end-panels">
+                <a href="/out" class="end-panels__out"><span>Выйти</span></a>
+            </div>
+        </div>
+    </div>
 </header>

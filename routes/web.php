@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/welcome', function () {
     return view('welcome');
 });
-Route::get('/', function () {
-    return view('home');
-})->name('login');
+Route::get('/', [\App\Http\Controllers\LoginController::class, 'index'])->name('login');
 Route::group(['middleware' => ['auth', 'valid.role'], 'namespace' => 'App\Http\Controllers'], function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
@@ -32,6 +30,8 @@ Route::group(['middleware' => ['auth', 'valid.role'], 'namespace' => 'App\Http\C
     Route::get('/shop', function () {
         return view('shop');
     })->name('shop');
+//    ======admin==parts=======
+    Route::get('/admin/profile/', [\App\Http\Controllers\UserController::class, 'index'])->name('admin-profile');
 });
 
 Route::post('/lc', [\App\Http\Controllers\LoginController::class, 'auth'])->name('auth');
