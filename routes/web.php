@@ -19,7 +19,7 @@ Route::get('/welcome', function () {
 Route::get('/', function () {
     return view('home');
 })->name('login');
-Route::group(['middleware' => 'auth', 'namespace' => 'App\Http\Controllers'], function(){
+Route::group(['middleware' => ['auth', 'valid.role'], 'namespace' => 'App\Http\Controllers'], function() {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
