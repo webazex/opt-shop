@@ -50,5 +50,12 @@ p, p span {
     font-weight: 400;
     font-style: normal;
 }
+.error-message {
+    padding: 10px;
+    border: 1px solid;
+    font-weight: 600;
+    color: red;
+    /*text-align: center;*/
+}
 /*====main==styles===end===*/
 

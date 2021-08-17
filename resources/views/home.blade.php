@@ -22,6 +22,11 @@
                         <span>Отмена</span>
                     </button>
                 </div>
+                @if($errors->any())
+                    <div class="error-message">{{$errors->first()}}<span></span></div>
+
+{{--                    <h4>{{$errors->first()}}</h4>--}}
+                @endif
             </form>
         </div>
     </div>
