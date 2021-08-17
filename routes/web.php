@@ -33,7 +33,6 @@ Route::group(['middleware' => ['auth', 'valid.role'], 'namespace' => 'App\Http\C
     })->name('shop');
 //    ======admin==parts=======
     Route::get('/admin/profile/', [\App\Http\Controllers\UserController::class, 'index'])->name('admin-profile');
-    Route::get('/admin/pages', [\App\Http\Controllers\UserController::class, 'index'])->name('admin-pages');
 });
 
 Route::post('/lc', [\App\Http\Controllers\LoginController::class, 'auth'])->name('auth');

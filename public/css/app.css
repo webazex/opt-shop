@@ -73,7 +73,7 @@ header {
 /*======header====end====*/
 .webacoders-admin {
     min-height: 100vh;
-    background-color: #4a5568;
+    background-color: #313131;
 }
 .admin-size {padding: 0;}
 .site-size__container-admin {
@@ -88,6 +88,8 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     padding: 10px 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,8,8,1) 35%, rgba(64,65,65,1) 100%);
 }
 .item__row-menu {
     display: flex;
@@ -118,6 +120,10 @@ header {
 .menu-panel__item:last-child {margin-bottom: 0;}
 .container-admin__content-panel {
     height: 100%;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .item__submenu {
     transition: all 2s ease-in-out;
@@ -126,3 +132,22 @@ header {
 .menu-panel__item:hover .item__submenu {
     display: block;
 }
+
+.content-panel__section {
+    display: none;
+    height: 100%;
+}
+.section__container-panel {
+    height: 100%;
+}
+.content-panel__section.default {
+    display: block;
+}
+.default .container-panel__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.default .container-panel__content *{color: white;}
